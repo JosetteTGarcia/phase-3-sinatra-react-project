@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   post "/categories" do
-    category = Category.new(params[:category])
+    category = Category.new(params)
     if category.save
       category.to_json
     else

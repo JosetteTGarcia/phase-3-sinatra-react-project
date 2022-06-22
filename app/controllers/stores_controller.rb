@@ -6,7 +6,7 @@ class StoresController < ApplicationController
   end
 
   post "/stores" do
-    store = Store.new(params[:store])
+    store = Store.new(params)
     if store.save
       store.to_json
     else
