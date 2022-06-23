@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
   post "/payments" do
     payment = Payment.new(params)
     if payment.save
-      payment.to_json(include: [:store] [:category])
+      payment.to_json(include: [:store, :category])
     else
       {errors: payment.errors.full_messages}.to_json
     end
