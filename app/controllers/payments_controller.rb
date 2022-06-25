@@ -25,9 +25,10 @@ class PaymentsController < ApplicationController
  
 
   patch "/payments/:id" do
-    payment = Payment.find_by_id(params[:id])
-    if payment && payment.update(params[:payment])
-      payment.to_json
+    payment = Payment.find(params[:id])
+    binding.pry
+    if payment && payment.update
+      payment.to_json(include: [:store, :category])
     else
       {errors: payment.errors.full_messages, status: "Unprocessable Entry"}.to_json
     end
