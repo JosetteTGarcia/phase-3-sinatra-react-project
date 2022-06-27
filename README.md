@@ -1,4 +1,4 @@
-## Pay up or Save up (Frontend)
+## Pay up or Save up (Backend)
 
 >Your Way Towards Saving More Than Paying 
 
@@ -46,6 +46,7 @@ Every day that you track your spending, you will begin to be more aware of your 
 ## Technologies Used
 
 This web app was made using:
+Frontend: 
 - [Material UI](https://materializecss.com/) 
 - React
 - Javascript 
